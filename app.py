@@ -1,7 +1,7 @@
+import time
 import pandas as pd
 import scipy.stats
 import streamlit as st
-import time
 
 # these are stateful variables which are preserved as Streamlin reruns this script
 if 'experiment_no' not in st.session_state:
@@ -47,7 +47,7 @@ if start_button:
                      columns=['no', 'iterations', 'mean'])
         ],
         axis=0)
-    st.session_state['df_experiment_results'] = \\
+    st.session_state['df_experiment_results'] = \
         st.session_state['df_experiment_results'].reset_index(drop=True)
 
 st.write(st.session_state['df_experiment_results'])
